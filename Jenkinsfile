@@ -9,8 +9,8 @@ pipeline {
         stage('Setup Environment & Install Dependencies') {
             steps {
                 sh '''
-                    python -m venv $VENV
-                    . $VENV/bin/activate
+                    python -m venv venv
+                    . venv/bin/activate
                     pip install --upgrade pip
                     pip install -r requirements.txt
                 '''
